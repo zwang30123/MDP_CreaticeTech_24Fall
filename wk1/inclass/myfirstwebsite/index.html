@@ -9,7 +9,7 @@
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -42,6 +42,7 @@
         a:hover {
             color: #003399;
         }
+
         /* Container Styling */
         .container {
             width: 90%;
@@ -49,6 +50,44 @@
             margin: 0 auto;
             padding: 2rem;
         }
+
+        /* Title Section Styling */
+        .main-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .main-title h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+            font-weight: bold;
+        }
+        .main-title::before,
+        .main-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 2px;
+            background-color: #111;
+        }
+        .main-title::before {
+            left: 0;
+        }
+        .main-title::after {
+            right: 0;
+        }
+
+        /* Line Element */
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #111;
+            margin: 1.5rem 0;
+        }
+
         /* Image and Video Styling */
         img, video {
             display: block;
@@ -58,10 +97,12 @@
             border-radius: 4px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+
         /* Section Styling */
         section {
             margin-bottom: 3rem;
         }
+
         /* Footer Styling */
         footer {
             text-align: center;
@@ -73,7 +114,15 @@
 </head>
 <body>
     <div class="container">
-        <!-- Title 1 -->
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1>Kludging as a Creative Approach to Technology</h1>
+        </div>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Original Project Section -->
         <section>
             <h1>Original Project</h1>
             <p><a href="https://kejyunwu.com/DigiScape-Sea-Sparkle" target="_blank">DigiScape - Sea Sparkle</a></p>
@@ -86,6 +135,9 @@
             <h3>Path, Tracking, Visuals, Flow</h3>
         </section>
 
+        <!-- Line Divider -->
+        <div class="line"></div>
+
         <!-- Ideas Section -->
         <section>
             <h1>Ideas</h1>
@@ -95,10 +147,13 @@
         <!-- P5.JS Experiments -->
         <section>
             <h1>P5.JS Experiments</h1>
-            <p><a href="https://editor.p5js.org/zwang30/full/jnqtzJlqQq" target="_blank">View Sketch 1</a></p>
-            <p><a href="https://editor.p5js.org/zwang30/full/sFwKIKjZ4" target="_blank">View Sketch 2</a></p>
-            <p><a href="https://editor.p5js.org/zwang30/full/pOc8-aQNv" target="_blank">View Sketch 3</a></p>
+            <p><a href="https://editor.p5js.org/zwang30/full/jnqtzJlqQq" target="_blank">Trash Picking on the Beach</a></p>
+            <p><a href="https://editor.p5js.org/zwang30/full/sFwKIKjZ4" target="_blank">Geometry and Human Boundaries </a></p>
+            <p><a href="https://editor.p5js.org/zwang30/full/pOc8-aQNv" target="_blank">Particle System Interaction </a></p>
         </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
 
         <!-- Installation Sketches -->
         <section>
@@ -126,6 +181,9 @@
             </video>
         </section>
 
+        <!-- Line Divider -->
+        <div class="line"></div>
+
         <!-- Final Section -->
         <section>
             <h1>Final P5.JS Link</h1>
@@ -139,7 +197,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Kludging as a Creative Approach to Technology</p>
+        <p>&copy; 2024 Zita Wang MDP 24Fall</p>
     </footer>
 </body>
 </html>
