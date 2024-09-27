@@ -202,13 +202,20 @@
     </footer>
 
     <script>
-        // Change background color on scroll
+        // Change background color on scroll from white to light blue
         window.addEventListener('scroll', function() {
             const scrollY = window.scrollY;
             const documentHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercentage = scrollY / documentHeight;
 
-            const bgColor = `rgb(${255 - (scrollPercentage * 255)}, ${255 - (scrollPercentage * 255)}, ${255 - (scrollPercentage * 255)})`;
+            // Color transition from white (255, 255, 255) to light blue (173, 216, 230)
+            const red = Math.round(255 - (scrollPercentage * (255 - 173)));
+            const green = Math.round(255 - (scrollPercentage * (255 - 216)));
+            const blue = Math.round(255 - (scrollPercentage * (255 - 230)));
+
+            const bgColor = `rgb(${red}, ${green}, ${blue})`;
             document.body.style.backgroundColor = bgColor;
         });
     </script>
+</body>
+</html>
