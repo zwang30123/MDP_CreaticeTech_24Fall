@@ -99,6 +99,16 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
+        /* Video Container */
+        .video-container {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10; /* Ensures video stays above the background */
+        }
+
         /* Section Styling */
         section {
             margin-bottom: 3rem;
@@ -172,16 +182,18 @@
         </section>
 
         <!-- Video Section -->
-        <section>
-    <video controls width="600" height="400">
-        <source src="https://raw.githubusercontent.com/zwang30123/MDP_CreaticeTech_24Fall/main/projector1.mp4" type="video/mp4">
-
-    </video>
+        <section class="video-container">
+            <video controls width="600" height="400">
+                <source src="https://raw.githubusercontent.com/zwang30123/MDP_CreaticeTech_24Fall/main/projector1.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="video-container">
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/laptop2.jpg?raw=true" alt="Testing Process">
-    <video controls width="600" height="400">
-        <source src="https://raw.githubusercontent.com/zwang30123/MDP_CreaticeTech_24Fall/main/laptop1.mp4" type="video/mp4">
-
-    </video>
+        </section>
+        <section class="video-container">
+            <video controls width="600" height="400">
+                <source src="https://raw.githubusercontent.com/zwang30123/MDP_CreaticeTech_24Fall/main/laptop1.mp4" type="video/mp4">
+            </video>
         </section>
 
         <!-- Line Divider -->
