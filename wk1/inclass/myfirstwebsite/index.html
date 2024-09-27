@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            transition: background-color 0.3s ease;
         }
         h1, h2, h3 {
             margin: 0;
@@ -164,8 +165,8 @@
         <!-- Concept 1 Section -->
         <section>
             <h1>Concept 1: Trash Picking on the Beach (Nose Tracking Interaction)</h1>
-            <h2>Theme: Environmental Awareness</h2>
-            <h2>Message: Users interact by collecting digital trash using the mouse, emphasizing the act of cleaning up beaches.</h2>
+            <h3>Theme: Environmental Awareness</h3>
+            <h3>Message: Users interact by collecting digital trash using the mouse, emphasizing the act of cleaning up beaches.</h3>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/projector2.jpeg?raw=true" alt="Testing Projection">
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/projector3.jpeg?raw=true" alt="Testing Projection">
         </section>
@@ -199,5 +200,15 @@
     <footer>
         <p>&copy; 2024 Zita Wang MDP 24Fall</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        // Change background color on scroll
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const documentHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = scrollY / documentHeight;
+
+            const bgColor = `rgb(${255 - (scrollPercentage * 255)}, ${255 - (scrollPercentage * 255)}, ${255 - (scrollPercentage * 255)})`;
+            document.body.style.backgroundColor = bgColor;
+        });
+    </script>
