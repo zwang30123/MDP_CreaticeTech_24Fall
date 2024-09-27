@@ -209,9 +209,9 @@
             const scrollPercentage = scrollY / documentHeight;
 
             // Color transition from white (255, 255, 255) to light blue (173, 216, 230)
-            const red = Math.round(255 - (scrollPercentage * (255 - 173)));
-            const green = Math.round(255 - (scrollPercentage * (255 - 216)));
-            const blue = Math.round(255 - (scrollPercentage * (255 - 230)));
+            const red = Math.round(255 - (scrollPercentage * (255 - 255)));
+            const green = Math.round(255 - (scrollPercentage * (255 - 64)));
+            const blue = Math.round(255 - (scrollPercentage * (255 - 0)));
 
             const bgColor = `rgb(${red}, ${green}, ${blue})`;
             document.body.style.backgroundColor = bgColor;
