@@ -15,66 +15,58 @@
             line-height: 1.6;
             transition: background-color 0.3s ease;
         }
-
         h1, h2, h3 {
             margin: 0;
             padding-bottom: 0.5rem;
             font-weight: 400;
         }
-
         h1 {
             font-size: 2.5rem;
             color: #222;
         }
-
         h2 {
             font-size: 1.75rem;
             color: #555;
         }
-
         h3 {
             font-size: 1.2rem;
             color: #777;
         }
-
         p, a {
             font-size: 1rem;
             color: #555;
         }
-
         a {
             text-decoration: none;
             color: #0066cc;
         }
-
         a:hover {
             color: #003399;
         }
 
-        /* Navigation Bar */
+        /* Navigation Bar Styling */
         .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            padding: 1rem 0;
+            background-color: #333;
+            overflow: hidden;
             position: sticky;
             top: 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
         .navbar a {
-            margin: 0 20px;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
             text-decoration: none;
-            color: #333;
             font-size: 1rem;
             text-transform: uppercase;
-            transition: color 0.3s;
         }
 
         .navbar a:hover {
-            color: #0066cc;
+            background-color: #575757;
+            color: #fff;
         }
 
         /* Container Styling */
@@ -91,7 +83,6 @@
             margin-bottom: 2rem;
             position: relative;
         }
-
         .main-title h1 {
             font-size: 3rem;
             text-transform: uppercase;
@@ -99,7 +90,6 @@
             color: #111;
             font-weight: bold;
         }
-
         .main-title::before,
         .main-title::after {
             content: '';
@@ -109,11 +99,9 @@
             height: 2px;
             background-color: #111;
         }
-
         .main-title::before {
             left: 0;
         }
-
         .main-title::after {
             right: 0;
         }
@@ -145,19 +133,18 @@
         footer {
             text-align: center;
             padding: 2rem 0;
-            color: white;
-            background-color: transparent;
+            color: white; 
+            background-color: transparent; 
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="#original-project">Original Project</a>
-        <a href="#keywords">Keywords</a>
-        <a href="#ideas">Ideas</a>
-        <a href="#experiments">P5.JS Experiments</a>
-        <a href="#installation-sketches">Installation Sketches</a>
+        <a href="home.html">Home</a>
+        <a href="index.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
     </div>
 
     <div class="container">
@@ -170,14 +157,14 @@
         <div class="line"></div>
 
         <!-- Original Project Section -->
-        <section id="original-project">
+        <section>
             <h1>Original Project</h1>
             <p><a href="https://kejyunwu.com/DigiScape-Sea-Sparkle" target="_blank">DigiScape - Sea Sparkle</a></p>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
         </section>
 
         <!-- Keywords Section -->
-        <section id="keywords">
+        <section>
             <h2>Keywords</h2>
             <h3>Path, Tracking, PoseNet, ML5.js, Interactive Game, Real-Time </h3>
         </section>
@@ -186,13 +173,13 @@
         <div class="line"></div>
 
         <!-- Ideas Section -->
-        <section id="ideas">
+        <section>
             <h1>Ideas</h1>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/diagram.png?raw=true" alt="Diagram">
         </section>
 
         <!-- P5.JS Experiments -->
-        <section id="experiments">
+        <section>
             <h1>P5.JS Experiments</h1>
             <p><a href="https://editor.p5js.org/zwang30/full/jnqtzJlqQq" target="_blank">Trash Picking on the Beach</a></p>
             <p><a href="https://editor.p5js.org/zwang30/full/sFwKIKjZ4" target="_blank">Geometry and Human Boundaries </a></p>
@@ -203,7 +190,7 @@
         <div class="line"></div>
 
         <!-- Installation Sketches -->
-        <section id="installation-sketches">
+        <section>
             <h1>Installation Sketches</h1>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/sketches.png?raw=true" alt="Installations">
         </section>
