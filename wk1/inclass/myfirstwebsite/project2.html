@@ -8,12 +8,20 @@
         /* Base Styling */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
+            color: #fff;
+            background: linear-gradient(135deg, #7b3f00, #a54a00, #ff6600, #ff3300);
+            background-size: 400% 400%;
+            animation: gradientShift 10s ease infinite;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             transition: background-color 0.3s ease;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         h1, h2, h3 {
@@ -24,40 +32,39 @@
 
         h1 {
             font-size: 2.5rem;
-            color: #222;
+            color: #fff;
         }
 
         h2 {
             font-size: 1.75rem;
-            color: #555;
+            color: #ddd;
         }
 
         h3 {
             font-size: 1.2rem;
-            color: #777;
+            color: #ccc;
         }
 
         p, a {
             font-size: 1rem;
-            color: #555;
+            color: #ccc;
         }
 
         a {
             text-decoration: none;
-            color: #0066cc;
+            color: #ffa500;
         }
 
         a:hover {
-            color: #003399;
+            color: #ff6600;
         }
 
         /* Navigation Bar Styling */
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -65,7 +72,7 @@
 
         .navbar a {
             margin: 0 20px;
-            color: #333;
+            color: #fff;
             font-size: 1rem;
             text-transform: uppercase;
             text-decoration: none;
@@ -73,7 +80,7 @@
         }
 
         .navbar a:hover {
-            color: #0066cc;
+            color: #ffa500;
         }
 
         /* Container Styling */
@@ -95,34 +102,16 @@
             font-size: 3rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #111;
+            color: #fff;
             font-weight: bold;
         }
 
-        .main-title::before,
-        .main-title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 40%;
-            height: 2px;
-            background-color: #111;
-        }
-
-        .main-title::before {
-            left: 0;
-        }
-
-        .main-title::after {
-            right: 0;
-        }
-
-        /* Line Element */
+        /* Removed line overlap with title */
         .line {
             width: 100%;
             height: 2px;
-            background-color: #111;
-            margin: 1.5rem 0;
+            background-color: #fff;
+            margin: 3rem 0;
         }
 
         /* Image and Video Styling */
@@ -132,7 +121,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         /* Section Styling */
@@ -144,7 +133,7 @@
         footer {
             text-align: center;
             padding: 2rem 0;
-            color: #777;
+            color: #ccc;
             background-color: transparent;
         }
 
@@ -168,20 +157,20 @@
         <!-- Original Project Section -->
         <section>
             <h1>Spreading Evolution: Mushrooms on Mars</h1>
-          <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
+            <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
 
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
         </section>
 
-              <!-- Intro Section -->
+        <!-- Intro Section -->
         <section>
             <h2>Concept</h2>
             <h3>This project simulates the growth of mushrooms on Mars using C4D to explore the idea of spreading. The core question is whether mushrooms, with their unique mycelial networks and ability to adapt, could evolve on Mars before human colonization. The mushrooms are portrayed in vibrant colors to symbolize both their biological transformation and adaptation to the Martian environment. The project’s narrative unfolds through the lens of a surveillance camera, implying an outside observer (possibly human) monitoring the progress of this strange, new life on a foreign planet.</h3>
         </section>
-      
+
         <!-- Line Divider -->
         <div class="line"></div>
-      
+
         <!-- Keywords Section -->
         <section>
             <h2>Keywords</h2>
@@ -189,16 +178,15 @@
             <h3>Adapting: The mushrooms evolve to the Martian environment, possibly suggesting they can thrive where humans might struggle.</h3>
         </section>
 
-              <!-- Line Divider -->
+        <!-- Line Divider -->
         <div class="line"></div>
-      
+
         <!-- Visual Section -->
         <section>
             <h2>Visual Style</h2>
-                   <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
+            <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
             <h3>Colorful mushrooms to indicate evolution and adaptation in an alien environment.</h3>
-            <h3>A surveillance camera perspective will create a sense of observation, as though humanity is monitoring nature's progress, evoking questions about control, dominance, and co-existence.
-</h3>
+            <h3>A surveillance camera perspective will create a sense of observation, as though humanity is monitoring nature's progress, evoking questions about control, dominance, and co-existence.</h3>
         </section>
 
         <!-- Line Divider -->
@@ -210,7 +198,6 @@
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/diagram.png?raw=true" alt="Diagram">
         </section>
 
-
         <!-- Line Divider -->
         <div class="line"></div>
 
@@ -221,35 +208,18 @@
         </section>
 
         <!-- Video Section -->
-         <h1>Final Video</h1>
+        <h1>Final Video</h1>
         <section>
             <video controls>
                 <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/pro.mp4?raw=true" type="video/mp4">
             </video>
         </section>
 
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
+        </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
-    </footer>
-
-    <script>
-
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            const documentHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollY / documentHeight;
-
-
-            const red = Math.round(255 - (scrollPercentage * 255));
-            const green = Math.round(255 - (scrollPercentage * 64));
-            const blue = Math.round(255 - (scrollPercentage * 0));
-
-            const bgColor = `rgb(${red}, ${green}, ${blue})`;
-            document.body.style.backgroundColor = bgColor;
-        });
-    </script>
+    </div>
 </body>
 </html>
-
