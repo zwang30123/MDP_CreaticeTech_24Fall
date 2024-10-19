@@ -12,15 +12,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background: linear-gradient(135deg, #ff0099, #ff66cc, #ff99cc, #ffe6ff);
-            background-size: 400% 400%;
-            animation: gradientShift 10s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            background-color: rgb(255, 150, 255); /* Initial pink background */
+            transition: background-color 0.3s ease; /* Smooth color transition */
         }
 
         h1, h2, h3 {
@@ -94,7 +87,7 @@
         /* Title Section Styling */
         .main-title {
             text-align: center;
-            margin-bottom: 3rem; /* Increase margin to avoid overlap */
+            margin-bottom: 3rem;
             position: relative;
         }
 
@@ -175,15 +168,14 @@
         <!-- Original Project Section -->
         <section>
             <h1>Spreading Evolution: Mushrooms on Mars</h1>
-          <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
-
+            <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
         </section>
 
         <!-- Intro Section -->
         <section>
             <h2>Concept</h2>
-            <h3>This project simulates the growth of mushrooms on Mars using C4D to explore the idea of spreading. The core question is whether mushrooms, with their unique mycelial networks and ability to adapt, could evolve on Mars before human colonization. The mushrooms are portrayed in vibrant colors to symbolize both their biological transformation and adaptation to the Martian environment. The project’s narrative unfolds through the lens of a surveillance camera, implying an outside observer (possibly human) monitoring the progress of this strange, new life on a foreign planet.</h3>
+            <h3>This project simulates the growth of mushrooms on Mars using C4D to explore the idea of spreading. The core question is whether mushrooms, with their unique mycelial networks and ability to adapt, could evolve on Mars before human colonization. The mushrooms are portrayed in vibrant colors to symbolize both their biological transformation and adaptation to the Martian environment.</h3>
         </section>
 
         <!-- Line Divider -->
@@ -204,7 +196,6 @@
             <h2>Visual Style</h2>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
             <h3>Colorful mushrooms to indicate evolution and adaptation in an alien environment.</h3>
-            <h3>A surveillance camera perspective will create a sense of observation, as though humanity is monitoring nature's progress, evoking questions about control, dominance, and co-existence.</h3>
         </section>
 
         <!-- Line Divider -->
@@ -226,7 +217,7 @@
         </section>
 
         <!-- Video Section -->
-         <h1>Final Video</h1>
+        <h1>Final Video</h1>
         <section>
             <video controls>
                 <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/pro.mp4?raw=true" type="video/mp4">
@@ -237,5 +228,23 @@
     <footer>
         <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
     </footer>
+
+    <!-- Script for Dynamic Background Color -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const documentHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = scrollY / documentHeight;
+
+            // Adjust the RGB values for a colorful pink gradient
+            const red = Math.round(255); // Keep red fixed for pink shades
+            const green = Math.round(150 - (scrollPercentage * 150)); // Reduce green as you scroll
+            const blue = Math.round(255 - (scrollPercentage * 200)); // Blue fades for a warmer pink
+
+            const bgColor = `rgb(${red}, ${green}, ${blue})`;
+            document.body.style.backgroundColor = bgColor;
+        });
+    </script>
+
 </body>
 </html>
