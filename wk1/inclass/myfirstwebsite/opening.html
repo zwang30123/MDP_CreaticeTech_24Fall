@@ -11,32 +11,12 @@
             color: #fff;
             margin: 0;
             padding: 0;
-            background-color: #000;
             overflow: hidden;
+            background-color: #000;
             text-align: center;
         }
 
-        /* Tech & Art Gradient Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1e1e1e, #383838, #4b4b4b, #000000);
-            background-size: 400% 400%;
-            animation: gradientShift 10s ease infinite;
-            z-index: -1;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Modern Navigation Bar */
+        /* Navigation Bar */
         .navbar {
             display: flex;
             justify-content: center;
@@ -70,6 +50,8 @@
             height: 100vh;
             padding: 0 20px;
             box-sizing: border-box;
+            z-index: 1;
+            position: relative;
         }
 
         .container h1 {
@@ -111,6 +93,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1;
         }
 
         /* Responsive Design */
@@ -127,6 +110,14 @@
                 padding: 12px 30px;
                 font-size: 1rem;
             }
+        }
+
+        /* Particle Background Styling */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
         }
     </style>
 </head>
@@ -150,5 +141,75 @@
         &copy; 2024 Zita Wang | MDP 24Fall
     </footer>
 
+    <!-- Particle Effect Background Script -->
+    <script>
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        document.body.appendChild(canvas);
+
+        let particlesArray = [];
+        const numberOfParticles = 100;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor(x, y, size, directionX, directionY, color) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+                    this.directionY = -this.directionY;
+                }
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = Math.random() * 5;
+                let x = Math.random() * (innerWidth - size * 2);
+                let y = Math.random() * (innerHeight - size * 2);
+                let directionX = (Math.random() * 0.4) - 0.2;
+                let directionY = (Math.random() * 0.4) - 0.2;
+                let color = '#00aaff';
+                particlesArray.push(new Particle(x, y, size, directionX, directionY, color));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        window.addEventListener('resize', function () {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+            init();
+        });
+    </script>
 </body>
 </html>
