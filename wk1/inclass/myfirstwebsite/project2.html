@@ -12,8 +12,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: rgb(255, 150, 255); /* Initial pink background */
-            transition: background-color 0.3s ease; /* Smooth color transition */
+            background-color: rgb(255, 255, 255); /* Start with white */
+            transition: background-color 0.3s ease;
         }
 
         h1, h2, h3 {
@@ -167,6 +167,7 @@
 
         <!-- Original Project Section -->
         <section>
+            <p></p>
             <h1>Spreading Evolution: Mushrooms on Mars</h1>
             <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
@@ -236,10 +237,10 @@
             const documentHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercentage = scrollY / documentHeight;
 
-            // Adjust the RGB values for a colorful pink gradient
-            const red = Math.round(255); // Keep red fixed for pink shades
-            const green = Math.round(150 - (scrollPercentage * 150)); // Reduce green as you scroll
-            const blue = Math.round(255 - (scrollPercentage * 200)); // Blue fades for a warmer pink
+            // Adjust the RGB values to transition from white to low-saturation pink
+            const red = Math.round(255); // Constant red
+            const green = Math.round(255 - (scrollPercentage * 55)); // From white (255) to low green (200)
+            const blue = Math.round(255 - (scrollPercentage * 60)); // From white (255) to low blue (195)
 
             const bgColor = `rgb(${red}, ${green}, ${blue})`;
             document.body.style.backgroundColor = bgColor;
