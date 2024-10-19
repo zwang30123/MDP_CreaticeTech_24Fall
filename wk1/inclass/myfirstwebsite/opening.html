@@ -84,17 +84,21 @@
         }
 
         /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-            color: #aaa;
-            background-color: transparent;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1;
-        }
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensures the footer starts from the left edge */
+    width: 100%;
+    z-index: 1;
+    display: flex; /* Use flexbox to help with centering */
+    justify-content: center; /* Horizontally centers the content */
+}
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -138,7 +142,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Zita Wang | MDP 24Fall   </p>
+        <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
     </footer>
 
     <!-- Particle Effect Background Script -->
