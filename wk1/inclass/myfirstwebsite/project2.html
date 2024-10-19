@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: rgb(255, 255, 255); /* Initial white background */
+            background-color: rgb(255, 245, 245); /* Initial white-pink background */
             transition: background-color 0.3s ease; /* Smooth color transition */
         }
 
@@ -163,11 +163,11 @@
         <!-- Main Title Section -->
         <div class="main-title">
             <h1>Simulation and Design</h1>
-            <p></p>
         </div>
 
         <!-- Original Project Section -->
         <section>
+            <h1></h1>
             <h1>Spreading Evolution: Mushrooms on Mars</h1>
             <h3>What does it mean for non-human life to adapt to an alien planet before humans do?</h3>
             <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/image_0000.jpg?raw=true" alt="Diagram">
@@ -237,24 +237,24 @@
             const documentHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercentage = scrollY / documentHeight;
 
-            // Multi-step color transition: White -> Light Pink -> Deep Pink -> Purple
+            // Multi-step color transition: Muted colors from white to pastel tones
             let red, green, blue;
 
             if (scrollPercentage < 0.33) {
-                // White to light pink (255, 200, 255)
+                // White to light pastel pink (255, 230, 230)
                 red = Math.round(255);
-                green = Math.round(255 - scrollPercentage * 165); // from 255 to 200
-                blue = Math.round(255);
+                green = Math.round(245 - scrollPercentage * 75); // from 245 to 230
+                blue = Math.round(245 - scrollPercentage * 75); // from 245 to 230
             } else if (scrollPercentage < 0.66) {
-                // Light pink to deep pink (255, 100, 150)
+                // Light pastel pink to soft peach (255, 200, 210)
                 red = Math.round(255);
-                green = Math.round(200 - (scrollPercentage - 0.33) * 300); // from 200 to 100
-                blue = Math.round(255 - (scrollPercentage - 0.33) * 315); // from 255 to 150
+                green = Math.round(230 - (scrollPercentage - 0.33) * 90); // from 230 to 200
+                blue = Math.round(230 - (scrollPercentage - 0.33) * 20); // from 230 to 210
             } else {
-                // Deep pink to purple (200, 50, 200)
-                red = Math.round(255 - (scrollPercentage - 0.66) * 165); // from 255 to 200
-                green = Math.round(100 - (scrollPercentage - 0.66) * 150); // from 100 to 50
-                blue = Math.round(150 + (scrollPercentage - 0.66) * 50); // from 150 to 200
+                // Soft peach to light muted purple (220, 180, 230)
+                red = Math.round(255 - (scrollPercentage - 0.66) * 105); // from 255 to 220
+                green = Math.round(200 - (scrollPercentage - 0.66) * 60); // from 200 to 180
+                blue = Math.round(210 + (scrollPercentage - 0.66) * 20); // from 210 to 230
             }
 
             const bgColor = `rgb(${red}, ${green}, ${blue})`;
