@@ -92,12 +92,16 @@ footer {
     background-color: transparent;
     position: fixed;
     bottom: 0;
-    left: 0; /* Ensures the footer starts from the left edge */
+    left: 0;
     width: 100%;
     z-index: 1;
-    display: flex; /* Use flexbox to help with centering */
-    justify-content: center; /* Horizontally centers the content */
+    margin: 0; /* Ensures no margin on sides */
+    box-sizing: border-box; /* Prevents padding or borders from affecting the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 
         /* Responsive Design */
