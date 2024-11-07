@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthetic Relationships</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(255, 255, 255); 
+            transition: background-color 0.3s ease; 
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        p, a {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        a:hover {
+            color: #003399;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            margin: 0 20px;
+            color: #333;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #0066cc;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Title Section Styling */
+        .main-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .main-title h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .main-title::before,
+        .main-title::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background-color: #111;
+            top: 120%; 
+        }
+
+        .main-title::before {
+            left: 0;
+        }
+
+        .main-title::after {
+            right: 0;
+        }
+
+        /* Line Element */
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #111;
+            margin: 1.5rem 0;
+        }
+
+        /* Image and Video Styling */
+        img, video {
+            display: block;
+            margin: 1rem 0;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #777;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="opening.html">Home</a>
+        <a href="index.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
+        <a href="project3.html">Project 3</a>
+    </div>
+
+    <div class="container">
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1>Synthetic Relationships</h1>
+        </div>
+
+        <!-- Original Project Section -->
+        <section>
+            <br> <!-- Adding line space before the heading -->
+            <h1>SymbioSense</h1>
+            <h3>By Zita Wang & Jane Lu</h3>
+        </section>
+
+                <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Intro Section -->
+        <section>
+            <h2>Concept</h2>
+            <h3>In this project, we explore how plants in nature can communicate by creating a speculative system where two electronic beings mimic this exchange of information. This project reimagines plant communication in a digital context, emphasizing the symbiotic relationship between nature and technology. </h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Keywords Section -->
+        <section>
+            <h2>Keywords</h2>
+            <h3>Digital Plant Communication, Symbiotic Interaction, Sensor-Driven Response, Environmental Feedback Loop, Nature-Inspired Automation, Adafruit IO, ESP32 Feather, Arduino IDE</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Flow Section -->
+        <section>
+            <h1>Idea Diagram</h1>
+            <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/mood.png?raw=true" alt="Diagram">
+            <h3>Drawing inspiration from the interconnectedness of plant ecosystems, one being, designed as a mushroom provide humidity data. The second being, a mechanical flower, responds to this data by opening or closing. The feedback loop is completed when the mechanical flower sends signals back to the mushroom thorugh photo resistor, which lights up to represent the ongoing interaction.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Experiments Section -->
+        <section>
+            <h1>Experiments</h1>
+            <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/story.png?raw=true" alt="Experiments">
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Troubleshooting -->
+        <section>
+            <h1>Troubleshooting</h1>
+            <video controls>
+                <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/process.mp4?raw=true" type="video/mp4">
+            </video>
+        </section>
+
+                <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Video Section -->
+        <h1>Final Installation</h1>
+        <section>
+            <video controls>
+                <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/mush.mp4?raw=true" type="video/mp4">
+            </video>
+        </section>
+
+              <!-- Outcome Section -->
+        <section>
+            <h1>Learning Outcome</h1>
+            <h3>In this project, we learned a lot about using the ESP32 and Adafruit IO. We got hands-on experience with setting up sensors, collecting data, and sending it to Adafruit’s platform. This was our first time really working with physical computing, combining hardware and software to make things happen in the real world.
+
+We faced some challenges, like figuring out how to connect everything, fixing code issues, and making sure the devices communicated correctly. Solving these problems helped us understand more about troubleshooting and trying different solutions.
+
+Working as a team was also important. We split tasks, shared ideas, and helped each other when things got tricky. Overall, this project gave us practical experience in building a physical system and made us more confident to take on similar projects in the future.</h3>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
+    </footer>
+
+    <!-- Script for Dynamic Background Color -->
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const documentHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollY / documentHeight;
+
+        let red, green, blue;
+
+        if (scrollPercentage < 0.25) {
+            // White to yellow
+            red = Math.round(255);
+            green = Math.round(255 - scrollPercentage * 200); // From 255 to 255 (constant)
+            blue = Math.round(255 - scrollPercentage * 255); // From 255 to 0
+        } else if (scrollPercentage < 0.5) {
+            // Yellow to light green
+            red = Math.round(255 - (scrollPercentage - 0.25) * 255); // From 255 to 0
+            green = Math.round(255);
+            blue = Math.round((scrollPercentage - 0.25) * 100); // From 0 to 100
+        } else if (scrollPercentage < 0.75) {
+            // Light green to blue
+            red = Math.round(0);
+            green = Math.round(255 - (scrollPercentage - 0.5) * 255); // From 255 to 0
+            blue = Math.round(100 + (scrollPercentage - 0.5) * 155); // From 100 to 255
+        } else {
+            // Blue to light pink
+            red = Math.round((scrollPercentage - 0.75) * 255); // From 0 to 255
+            green = Math.round((scrollPercentage - 0.75) * 200); // From 0 to 200
+            blue = Math.round(255 - (scrollPercentage - 0.75) * 25); // From 255 to 230
+        }
+
+        const bgColor = `rgb(${red}, ${green}, ${blue})`;
+        document.body.style.backgroundColor = bgColor;
+    });
+</script>
+
+
+</body>
+</html>
 
