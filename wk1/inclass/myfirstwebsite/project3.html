@@ -256,32 +256,38 @@ Working as a team was also important. We split tasks, shared ideas, and helped e
 
         let red, green, blue;
 
-        if (scrollPercentage < 0.25) {
-            // White to yellow
-            red = Math.round(255);
-            green = Math.round(255 - scrollPercentage * 200); // From 255 to 255 (constant)
-            blue = Math.round(255 - scrollPercentage * 255); // From 255 to 0
-        } else if (scrollPercentage < 0.5) {
-            // Yellow to light green
-            red = Math.round(255 - (scrollPercentage - 0.25) * 255); // From 255 to 0
-            green = Math.round(255);
-            blue = Math.round((scrollPercentage - 0.25) * 100); // From 0 to 100
-        } else if (scrollPercentage < 0.75) {
-            // Light green to blue
-            red = Math.round(0);
-            green = Math.round(255 - (scrollPercentage - 0.5) * 255); // From 255 to 0
-            blue = Math.round(100 + (scrollPercentage - 0.5) * 155); // From 100 to 255
+        if (scrollPercentage < 0.2) {
+            // White to light yellow
+            red = 255;
+            green = Math.round(255 * scrollPercentage / 0.2);
+            blue = 255 - Math.round(55 * scrollPercentage / 0.2);
+        } else if (scrollPercentage < 0.4) {
+            // Light yellow to light green
+            red = Math.round(255 - (scrollPercentage - 0.2) * 255 / 0.2);
+            green = 255;
+            blue = Math.round(200 - (scrollPercentage - 0.2) * 200 / 0.2);
+        } else if (scrollPercentage < 0.6) {
+            // Light green to light blue
+            red = Math.round(200 - (scrollPercentage - 0.4) * 200 / 0.2);
+            green = Math.round(255 - (scrollPercentage - 0.4) * 55 / 0.2);
+            blue = 255;
+        } else if (scrollPercentage < 0.8) {
+            // Light blue to pastel pink
+            red = Math.round(220 + (scrollPercentage - 0.6) * 35 / 0.2);
+            green = Math.round(200 - (scrollPercentage - 0.6) * 100 / 0.2);
+            blue = 255;
         } else {
-            // Blue to light pink
-            red = Math.round((scrollPercentage - 0.75) * 255); // From 0 to 255
-            green = Math.round((scrollPercentage - 0.75) * 200); // From 0 to 200
-            blue = Math.round(255 - (scrollPercentage - 0.75) * 25); // From 255 to 230
+            // Pastel pink to light peach
+            red = 255;
+            green = Math.round(100 + (scrollPercentage - 0.8) * 100 / 0.2);
+            blue = Math.round(255 - (scrollPercentage - 0.8) * 55 / 0.2);
         }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 
 </body>
