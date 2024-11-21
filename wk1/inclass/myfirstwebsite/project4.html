@@ -323,22 +323,23 @@
 
         let red, green, blue;
 
-        if (scrollPercentage < 0.5) {
-            // White to very light cream yellow (dominantly white)
+        if (scrollPercentage < 0.7) {
+            // From white (255, 255, 255) to near white (255, 254, 245)
             red = 255;
-            green = Math.round(255 - scrollPercentage * 30); // Gradually reduces green
-            blue = Math.round(255 - scrollPercentage * 20); // Gradually reduces blue
+            green = Math.round(255 - scrollPercentage * 4); // Gradual decrease in green
+            blue = Math.round(255 - scrollPercentage * 10); // Gradual decrease in blue
         } else {
-            // Very light cream yellow to slightly deeper cream yellow
-            red = 255;
-            green = Math.round(225 - (scrollPercentage - 0.5) * 20); // Slightly deeper green
-            blue = Math.round(235 - (scrollPercentage - 0.5) * 10); // Slightly deeper blue
+            // From near white (255, 254, 245) to target color (254, 251, 234)
+            red = Math.round(255 - (scrollPercentage - 0.7) * 3 / 0.3); // Red slightly decreases to 254
+            green = Math.round(254 - (scrollPercentage - 0.7) * 10 / 0.3); // Green decreases to 251
+            blue = Math.round(245 - (scrollPercentage - 0.7) * 11 / 0.3); // Blue decreases to 234
         }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 
 
