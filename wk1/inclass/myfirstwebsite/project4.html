@@ -1,1 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthetic Relationships</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(255, 255, 255); 
+            transition: background-color 0.3s ease; 
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        p, a {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        a:hover {
+            color: #003399;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            margin: 0 20px;
+            color: #333;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #0066cc;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Title Section Styling */
+        .main-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .main-title h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .main-title::before,
+        .main-title::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background-color: #111;
+            top: 120%; 
+        }
+
+        .main-title::before {
+            left: 0;
+        }
+
+        .main-title::after {
+            right: 0;
+        }
+
+        /* Line Element */
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #111;
+            margin: 1.5rem 0;
+        }
+
+        /* Image and Video Styling */
+        img, video {
+            display: block;
+            margin: 1rem 0;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #777;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="opening.html">Home</a>
+        <a href="index.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
+        <a href="project3.html">Project 3</a>
+    </div>
+
+    <div class="container">
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1>Text as material and artifact</h1>
+        </div>
+
+        <!-- Original Project Section -->
+        <section>
+            <br> <!-- Adding line space before the heading -->
+            <h1>Lyric Oracle</h1>
+            <h3>A Machine’s Take on Your Life’s Questions</h3>
+                      <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/map.jpg?raw=true" alt="Experiments">
+        </section>
+
+        
+        <!-- Intro Section -->
+        <section>
+            <h2>Concept</h2>
+            <h3>Lyric Oracle bridges life’s big (or small) questions with the randomness of machine-generated responses. It’s a playful exploration where music, poetry, and algorithms collide to produce something unexpected and occasionally profound. What if a song lyric could truly answer your question? And what happens when two favorite songs combine into a machine-created poem? Let’s find out.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Keywords Section -->
+        <section>
+            <h2>Keywords</h2>
+            <h3>Digital Plant Communication, Symbiotic Interaction, Sensor-Driven Response, Environmental Feedback Loop, Nature-Inspired Automation, Adafruit IO, ESP32 Feather, Arduino IDE</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Info Section -->
+        <section>
+            <h1>What This Website Does</h1>
+            <h3>Ask & Answer: Input any question, pick a music genre, and get a random lyric that speaks to your query.
+Poetry Mashups: Combine lyrics from a random song with a user-provided favorite song to generate a machine-crafted six-line poem.
+Listen Instantly: Links to Spotify and YouTube ensure you can dive straight into the music that inspired your answers.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Work Section -->
+        <section>
+            <h1>How It Works</h1>
+                  <h3>Question Meets Music:
+— Input a question and select a genre.
+— The system fetches a lyric line from a random song in the chosen genre to provide an answer.
+
+Song Mashup Poetry:
+— Input a favorite song, and the system combines its lyrics with another song’s lyrics to craft a unique, short poem.
+
+Fallback Plan:
+— If lyrics are unavailable, motivational messages step in with personalized guidance, because sometimes, the best advice is already within you.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Key Fun Features -->
+        <section>
+            <h1>Key Fun Features</h1>
+
+            <h3>Randomized Responses: Each answer starts with one of three unique introductory styles, keeping things fresh and dynamic.
+Machine-Crafted Poetry: The system blends two sets of lyrics into a quirky yet meaningful poem, showcasing the playful potential of machine creativity.
+Interactive Design: Hover animations, scrollable results, and clean aesthetics enhance user engagement and experience.</h3>
+        </section>
+
+                <!-- Line Divider -->
+        <div class="line"></div>
+
+              <!-- Technical Overview -->
+        <section>
+            <h1>Technical Overview</h1>
+
+            <h3>APIs in Action:
+— Spotify API: Fetches songs by genre.
+— Lyrics.ovh API: Retrieves song lyrics.
+— YouTube API: Links relevant music videos.
+
+Core Technologies:
+— JavaScript drives the dynamic content generation and API calls.
+— CSS ensures responsive design with scrollable output areas and fun hover effects.
+
+Challenges Tackled:
+— Missing lyrics are gracefully handled with fallback messages to maintain functionality.
+— Poetry generation is capped at six lines to ensure brevity and coherence.</h3>
+        </section>
+
+                      <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Video Section -->
+        <h1>Final Installation</h1>
+        <section>
+            <video controls>
+                <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/finalplant.mp4?raw=true" type="video/mp4">
+            </video>
+        </section>
+
+                        <!-- Line Divider -->
+        <div class="line"></div>
+        
+              <!-- Outcome Section -->
+        <section>
+            <h1>Reflection</h1>
+            <h3>Effort & Challenges:
+This project combines music, randomness, and user interactivity into a seamless experience. Generating poetry from shuffled lyrics highlights the creative potential of machines, even when the results feel chaotic. Handling missing lyrics and ensuring poems remained short yet coherent were key challenges tackled successfully.
+
+What Could Be Improved:
+Expanding the genre and song selection or adding mood-based lyric generation could enhance personalization.
+
+Final Thoughts:
+Lyric Oracle turns simple inputs into creative outputs, sparking joy, laughter, and even a bit of reflection. It’s a lighthearted exploration of how machines reinterpret human creativity.
+
+</h3>
+        </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
+    </footer>
+
+<!-- Script for Dynamic Background Color -->
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const documentHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollY / documentHeight;
+
+        // White to light gray transition
+        let red = Math.round(255 - scrollPercentage * 55); // Red decreases from 255 to 200
+        let green = Math.round(255 - scrollPercentage * 55); // Green decreases from 255 to 200
+        let blue = Math.round(255 - scrollPercentage * 55); // Blue decreases from 255 to 200
+
+        const bgColor = `rgb(${red}, ${green}, ${blue})`;
+        document.body.style.backgroundColor = bgColor;
+    });
+</script>
+
+
+
+
+</body>
+</html>
 
