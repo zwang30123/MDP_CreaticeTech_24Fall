@@ -251,7 +251,7 @@
 
 <!-- Script for Dynamic Background Color -->
 <script>
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollY = window.scrollY;
         const documentHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercentage = scrollY / documentHeight;
@@ -261,19 +261,20 @@
         if (scrollPercentage < 0.5) {
             // White to very light blue (more white dominance)
             red = 255;
-            green = Math.round(255 - scrollPercentage * 30); // Gradual reduction of green
-            blue = Math.round(255 - scrollPercentage * 50); // Gradual reduction of blue
+            green = Math.round(255 - scrollPercentage * 30); // Gradually reduces green
+            blue = Math.round(255 - scrollPercentage * 50); // Gradually reduces blue
         } else {
-            // Light blue to a slightly darker light blue
-            red = Math.round(255 - (scrollPercentage - 0.5) * 30); // Red decreases slightly
-            green = Math.round(225 - (scrollPercentage - 0.5) * 50); // Green decreases more
-            blue = Math.round(205 - (scrollPercentage - 0.5) * 30); // Blue decreases slightly
+            // Very light blue to a slightly deeper light blue
+            red = Math.round(255 - (scrollPercentage - 0.5) * 20); // Red decreases slightly
+            green = Math.round(225 - (scrollPercentage - 0.5) * 30); // Green decreases slightly
+            blue = Math.round(205 - (scrollPercentage - 0.5) * 40); // Blue increases slightly for richer blue
         }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 </body>
 </html>
