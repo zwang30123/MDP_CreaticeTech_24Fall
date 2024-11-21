@@ -259,21 +259,22 @@
         let red, green, blue;
 
         if (scrollPercentage < 0.5) {
-            // White to very light blue (more white dominance)
-            red = 255;
-            green = Math.round(255 - scrollPercentage * 30); // Gradually reduces green
-            blue = Math.round(255 - scrollPercentage * 50); // Gradually reduces blue
+            // From white (255, 255, 255) to slightly light blue (245, 249, 252)
+            red = Math.round(255 - scrollPercentage * 20); // Red decreases slightly
+            green = Math.round(255 - scrollPercentage * 12); // Green decreases slightly
+            blue = Math.round(255 - scrollPercentage * 6);  // Blue decreases slightly
         } else {
-            // Very light blue to a slightly deeper light blue
-            red = Math.round(255 - (scrollPercentage - 0.5) * 20); // Red decreases slightly
-            green = Math.round(225 - (scrollPercentage - 0.5) * 30); // Green decreases slightly
-            blue = Math.round(205 - (scrollPercentage - 0.5) * 40); // Blue increases slightly for richer blue
+            // From light blue (245, 249, 252) to target color (230, 243, 248)
+            red = Math.round(245 - (scrollPercentage - 0.5) * 30); // Red decreases to 230
+            green = Math.round(249 - (scrollPercentage - 0.5) * 12); // Green decreases to 243
+            blue = Math.round(252 - (scrollPercentage - 0.5) * 8);  // Blue decreases to 248
         }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 
 </body>
