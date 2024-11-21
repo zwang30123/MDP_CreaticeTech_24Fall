@@ -172,7 +172,7 @@
             <br> <!-- Adding line space before the heading -->
             <h1>Lyric Oracle</h1>
             <h3>A Machine’s Take on Your Life’s Questions</h3>
-                      <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/open.jpg?raw=true" alt="Open Page">
+                      <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/open.png?raw=true" alt="Open Page">
         </section>
 
                 <!-- Line Divider -->
@@ -315,27 +315,31 @@
     </footer>
 
 <!-- Script for Dynamic Background Color -->
-<!-- Script for Dynamic Background Color -->
 <script>
     window.addEventListener('scroll', function() {
         const scrollY = window.scrollY;
         const documentHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercentage = scrollY / documentHeight;
 
-        // White to light blue transition with emphasis on white
-        let red = Math.round(255 - scrollPercentage * 30); // Red decreases slightly
-        let green = Math.round(255 - scrollPercentage * 50); // Green decreases more
-        let blue = Math.round(255 - scrollPercentage * 100); // Blue increases more for blue tint
+        let red, green, blue;
 
-        // Ensure RGB values are clamped between 0 and 255
-        red = Math.max(200, red); // Minimum lightness for red
-        green = Math.max(200, green); // Minimum lightness for green
-        blue = Math.min(255, blue); // Maximum blue for light blue transition
+        if (scrollPercentage < 0.7) {
+            // White to very light gray (mostly white)
+            red = 255 - Math.round(scrollPercentage * 20); // Gradual decrease from 255 to 235
+            green = 255 - Math.round(scrollPercentage * 20); // Gradual decrease from 255 to 235
+            blue = 255 - Math.round(scrollPercentage * 20); // Gradual decrease from 255 to 235
+        } else {
+            // Very light gray to slightly darker light gray
+            red = 235 - Math.round((scrollPercentage - 0.7) * 15 / 0.3); // Further decrease to 220
+            green = 235 - Math.round((scrollPercentage - 0.7) * 15 / 0.3); // Further decrease to 220
+            blue = 235 - Math.round((scrollPercentage - 0.7) * 15 / 0.3); // Further decrease to 220
+        }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 
 
