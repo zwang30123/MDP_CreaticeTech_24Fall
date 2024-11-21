@@ -258,22 +258,23 @@
 
         let red, green, blue;
 
-        if (scrollPercentage < 0.7) {
-            // From white (255, 255, 255) to near white (240, 247, 250)
-            red = Math.round(255 - scrollPercentage * 20); // Gradual decrease in red
-            green = Math.round(255 - scrollPercentage * 12); // Gradual decrease in green
-            blue = Math.round(255 - scrollPercentage * 5);  // Gradual decrease in blue
+        if (scrollPercentage < 0.5) {
+            // From white (255, 255, 255) to slightly light blue (245, 249, 252)
+            red = Math.round(255 - scrollPercentage * 20); // Red decreases slightly
+            green = Math.round(255 - scrollPercentage * 12); // Green decreases slightly
+            blue = Math.round(255 - scrollPercentage * 6);  // Blue decreases slightly
         } else {
-            // From near white to target color (222, 239, 245)
-            red = Math.round(240 - (scrollPercentage - 0.7) * 60 / 0.3); // Red decreases to 222
-            green = Math.round(247 - (scrollPercentage - 0.7) * 30 / 0.3); // Green decreases to 239
-            blue = Math.round(250 - (scrollPercentage - 0.7) * 15 / 0.3); // Blue decreases to 245
+            // From light blue (245, 249, 252) to target color (230, 243, 248)
+            red = Math.round(245 - (scrollPercentage - 0.5) * 30); // Red decreases to 230
+            green = Math.round(249 - (scrollPercentage - 0.5) * 12); // Green decreases to 243
+            blue = Math.round(252 - (scrollPercentage - 0.5) * 8);  // Blue decreases to 248
         }
 
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
 </script>
+
 
 
 
