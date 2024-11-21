@@ -249,21 +249,31 @@
         <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
     </footer>
 
-    <script>
+<!-- Script for Dynamic Background Color -->
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const documentHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollY / documentHeight;
 
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            const documentHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollY / documentHeight;
+        let red, green, blue;
 
+        if (scrollPercentage < 0.5) {
+            // White to very light blue (more white dominance)
+            red = 255;
+            green = Math.round(255 - scrollPercentage * 30); // Gradual reduction of green
+            blue = Math.round(255 - scrollPercentage * 50); // Gradual reduction of blue
+        } else {
+            // Light blue to a slightly darker light blue
+            red = Math.round(255 - (scrollPercentage - 0.5) * 30); // Red decreases slightly
+            green = Math.round(225 - (scrollPercentage - 0.5) * 50); // Green decreases more
+            blue = Math.round(205 - (scrollPercentage - 0.5) * 30); // Blue decreases slightly
+        }
 
-            const red = Math.round(255 - (scrollPercentage * 255));
-            const green = Math.round(255 - (scrollPercentage * 64));
-            const blue = Math.round(255 - (scrollPercentage * 0));
+        const bgColor = `rgb(${red}, ${green}, ${blue})`;
+        document.body.style.backgroundColor = bgColor;
+    });
+</script>
 
-            const bgColor = `rgb(${red}, ${green}, ${blue})`;
-            document.body.style.backgroundColor = bgColor;
-        });
-    </script>
 </body>
 </html>
