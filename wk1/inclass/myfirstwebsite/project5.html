@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Materialities</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(255, 255, 255);
+            transition: background-color 0.3s ease; 
+        }
 
+        h1, h2, h3 {
+            margin: 0;
+            padding-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        p, a {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        a:hover {
+            color: #003399;
+        }
+
+   
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            margin: 0 20px;
+            color: #333;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #0066cc;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+
+        .main-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .main-title h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+            font-weight: bold;
+        }
+
+        .main-title::before,
+        .main-title::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background-color: #111;
+            top: 120%;
+        }
+
+        .main-title::before {
+            left: 0;
+        }
+
+        .main-title::after {
+            right: 0;
+        }
+
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #111;
+            margin: 1.5rem 0;
+        }
+
+
+        img, video {
+            display: block;
+            margin: 1rem 0;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #777;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="opening.html">Home</a>
+        <a href="index.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
+        <a href="project3.html">Project 3</a>
+        <a href="project4.html">Project 4</a>
+        <a href="project5.html">Project 5</a>
+    </div>
+
+    <div class="container">
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1>Digital Materialities</h1>
+        </div>
+
+        <!-- Original Project Section -->
+        <section>
+            <br> <!-- Adding line space before the heading -->
+            <h1>Sound Waves: A Visual Symphony</h1>
+                      <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/open.png?raw=true" alt="Open Page">
+        </section>
+
+                <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Intro Section -->
+        <section>
+            <h2>Concept</h2>
+            <h3>"Sound Waves" transforms human voice into dynamic water ripples, creating an intimate dialogue between sound and visual art. When silence fills the room, gentle blue-white ripples shimmer like a calm lake surface. As voices emerge, the waves respond with warm orange hues, eventually blooming into vibrant pink-purple patterns during moments of intense sound.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Keywords Section -->
+        <section>
+            <h2>Keywords</h2>
+            <h3>Audio Visualization, Water Ripples, Color Transitions, GLSL Shaders, Interactive Art</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Info Section -->
+        <section>
+            <h1>Inspiration</h1>
+        <h3>Drawing inspiration from the natural world, this project explores how sound waves can be visualized as water ripples. The relationship between sound and water creates a meditative space where viewers can "see" their voices transform into flowing patterns. The color palette – from serene blue-white to energetic pink-purple – reflects the emotional qualities of different sound intensities.</h3>
+        </section>
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Work Section -->
+<section>
+  <h1>Core Technologies</h1> 
+ <h3>p5.js for audio input and canvas management</h3>
+ <h3>GLSL shaders for fluid ripple effects</h3>
+ <h3>WebGL for rendering</h3>
+</section>
+
+
+        <!-- Line Divider -->
+        <div class="line"></div>
+
+        <!-- Key Features -->
+<section>
+  <h1>Key Features</h1>
+ <h3>Real-time audio response</h3>
+ <h3>Dynamic color transitions based on sound intensity</h3>
+ <h3>Organic ripple animations</h3>
+ <h3>Background ambient movement</h3>
+</section>
+
+
+                <!-- Line Divider -->
+        <div class="line"></div>
+
+              <!-- Visual Overview -->
+<section>
+  <h1>Visual States</h1>
+
+  <h3><strong>Quiet State: </strong>Subtle blue-white ripples (0.0 - 0.1 sound level)</h3>
+  <h3><strong>Active State: </strong>Warm orange waves (0.1 - 0.14 sound level)</h3>
+  <h3><strong>Energetic State: </strong>Vivid pink-purple patterns (> 0.18 sound level)</h3>
+</section>
+
+
+                      <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Documentation Examples -->
+        <section>
+            <h1>Fun Examples</h1>
+
+                <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/example.png?raw=true" alt="troubles">
+
+            <video controls>
+                <source src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/lo.mp4?raw=true" type="video/mp4">
+ 
+            </video>
+        </section>
+
+                              <!-- Line Divider -->
+        <div class="line"></div>
+        
+        <!-- Test -->
+        <section>
+            <h1>Try It！</h1>
+  <h3><a href="https://zitacreativetechapi.netlify.app/">Click here</a></h3>
+  <h3>Allow microphone access when prompted</h3>
+<h3><strong>Try speaking at different volumes:</strong></h3>
+
+<h3>Whisper to see gentle blue ripples</h3>
+<h3>Normal speech for orange waves</h3>
+<h3>Loud voice for pink patterns</h3>
+
+
+<h3>Observe how silence creates subtle background movement</h3>
+        </section>
+
+                        <!-- Line Divider -->
+        <div class="line"></div>
+        
+              <!-- Outcome Section -->
+<section>
+  <h1>Future Development</h1>
+
+   <h3>The project could evolve to include frequency analysis for more nuanced visual responses, mobile device support, and interactive sound presets. These additions would further enhance the connection between sound and visual elements while maintaining the core aesthetic of fluid, organic movement.</h3>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zita Wang | MDP 24Fall</p>
+    </footer>
+
+<!-- Script for Dynamic Background Color -->
+<script>
+    window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
+        const documentHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollY / documentHeight;
+
+        let red, green, blue;
+
+        if (scrollPercentage < 0.7) {
+            // From white (255, 255, 255) to near white (255, 254, 245)
+            red = 255;
+            green = Math.round(255 - scrollPercentage * 4); // Gradual decrease in green
+            blue = Math.round(255 - scrollPercentage * 10); // Gradual decrease in blue
+        } else {
+            // From near white (255, 254, 245) to target color (254, 251, 234)
+            red = Math.round(255 - (scrollPercentage - 0.7) * 3 / 0.3); // Red slightly decreases to 254
+            green = Math.round(254 - (scrollPercentage - 0.7) * 10 / 0.3); // Green decreases to 251
+            blue = Math.round(245 - (scrollPercentage - 0.7) * 11 / 0.3); // Blue decreases to 234
+        }
+
+        const bgColor = `rgb(${red}, ${green}, ${blue})`;
+        document.body.style.backgroundColor = bgColor;
+    });
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
