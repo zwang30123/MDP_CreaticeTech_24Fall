@@ -200,6 +200,7 @@
         <section>
             <h1>Inspiration</h1>
         <h3>Drawing inspiration from the natural world, this project explores how sound waves can be visualized as water ripples. The relationship between sound and water creates a meditative space where viewers can "see" their voices transform into flowing patterns. The color palette – from serene blue-white to energetic pink-purple – reflects the emotional qualities of different sound intensities.</h3>
+            <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/example.png?raw=true" alt="troubles">
         </section>
 
         <!-- Line Divider -->
@@ -245,7 +246,7 @@
         
         <!-- Documentation Examples -->
         <section>
-            <h1>Fun Examples</h1>
+            <h1>Documentation</h1>
 
                 <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/example.png?raw=true" alt="troubles">
 
@@ -270,7 +271,7 @@
 <h3>Loud voice for pink patterns</h3>
 
 
-<h3>Observe how silence creates subtle background movement</h3>
+<h3><strong>Observe how silence creates subtle background movement</strong></h3>
         </section>
 
                         <!-- Line Divider -->
@@ -301,15 +302,15 @@
         let red, green, blue;
         
         if (scrollPercentage < 0.5) {
-            // 淡蓝色过渡到橘色 (187, 220, 235) -> (235, 200, 170)
-            red = Math.round(187 + scrollPercentage * (235 - 187) / 0.5);
-            green = Math.round(220 + scrollPercentage * (200 - 220) / 0.5);
-            blue = Math.round(235 + scrollPercentage * (170 - 235) / 0.5);
+            
+            red = Math.round(210 + scrollPercentage * (230 - 210) / 0.5);
+            green = Math.round(220 + scrollPercentage * (205 - 220) / 0.5);
+            blue = Math.round(225 + scrollPercentage * (185 - 225) / 0.5);
         } else {
-            // 橘色过渡到紫色 (235, 200, 170) -> (200, 180, 220)
-            red = Math.round(235 + (scrollPercentage - 0.5) * (200 - 235) / 0.5);
-            green = Math.round(200 + (scrollPercentage - 0.5) * (180 - 200) / 0.5);
-            blue = Math.round(170 + (scrollPercentage - 0.5) * (220 - 170) / 0.5);
+            
+            red = Math.round(230 + (scrollPercentage - 0.5) * (215 - 230) / 0.5);
+            green = Math.round(205 + (scrollPercentage - 0.5) * (195 - 205) / 0.5);
+            blue = Math.round(185 + (scrollPercentage - 0.5) * (210 - 185) / 0.5);
         }
         
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
