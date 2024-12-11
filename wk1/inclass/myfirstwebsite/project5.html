@@ -298,21 +298,26 @@
         const scrollY = window.scrollY;
         const documentHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercentage = scrollY / documentHeight;
-        
+
         let red, green, blue;
-        
-        if (scrollPercentage < 0.5) {
-            
-            red = Math.round(210 + scrollPercentage * (230 - 210) / 0.5);
-            green = Math.round(220 + scrollPercentage * (205 - 220) / 0.5);
-            blue = Math.round(225 + scrollPercentage * (185 - 225) / 0.5);
+
+        if (scrollPercentage < 0.33) {
+    
+            red = Math.round(255 - scrollPercentage * 75 / 0.33);
+            green = Math.round(255 - scrollPercentage * 15 / 0.33);
+            blue = Math.round(255 - scrollPercentage * 0 / 0.33);
+        } else if (scrollPercentage < 0.66) {
+
+            red = Math.round(230 + (scrollPercentage - 0.33) * 75 / 0.33);
+            green = Math.round(240 - (scrollPercentage - 0.33) * 5 / 0.33);
+            blue = Math.round(255 - (scrollPercentage - 0.33) * 35 / 0.33);
         } else {
-            
-            red = Math.round(230 + (scrollPercentage - 0.5) * (215 - 230) / 0.5);
-            green = Math.round(205 + (scrollPercentage - 0.5) * (195 - 205) / 0.5);
-            blue = Math.round(185 + (scrollPercentage - 0.5) * (210 - 185) / 0.5);
+
+            red = Math.round(255 - (scrollPercentage - 0.66) * 15 / 0.34);
+            green = Math.round(235 - (scrollPercentage - 0.66) * 10 / 0.34);
+            blue = Math.round(220 + (scrollPercentage - 0.66) * 25 / 0.34);
         }
-        
+
         const bgColor = `rgb(${red}, ${green}, ${blue})`;
         document.body.style.backgroundColor = bgColor;
     });
