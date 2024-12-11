@@ -238,7 +238,7 @@
   <h3><strong>Quiet State: </strong>Subtle blue-white ripples (0.0 - 0.1 sound level)</h3>
   <h3><strong>Active State: </strong>Warm orange waves (0.1 - 0.14 sound level)</h3>
   <h3><strong>Energetic State: </strong>Vivid pink-purple patterns (> 0.18 sound level)</h3>
- <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/codes.jpeg?raw=true" alt="codes">
+ <img src="https://github.com/zwang30123/MDP_CreaticeTech_24Fall/blob/main/flow1.png?raw=true" alt="flow">
 </section>
 
 
@@ -303,17 +303,17 @@
         let red, green, blue;
 
         if (scrollPercentage < 0.33) {
-            // 从白色 (255, 255, 255) 过渡到更淡的淡蓝色 (242, 247, 255)
+
             red = Math.round(255 - scrollPercentage * 37.5 / 0.33);
             green = Math.round(255 - scrollPercentage * 7.5 / 0.33);
             blue = Math.round(255 - scrollPercentage * 0 / 0.33);
         } else if (scrollPercentage < 0.66) {
-            // 从更淡的淡蓝色 (242, 247, 255) 过渡到更淡的淡橘色 (255, 245, 237)
+     
             red = Math.round(242 + (scrollPercentage - 0.33) * 37.5 / 0.33);
             green = Math.round(247 - (scrollPercentage - 0.33) * 2.5 / 0.33);
             blue = Math.round(255 - (scrollPercentage - 0.33) * 17.5 / 0.33);
         } else {
-            // 从更淡的淡橘色 (255, 245, 237) 过渡到更淡的淡紫色 (248, 240, 252)
+
             red = Math.round(255 - (scrollPercentage - 0.66) * 7.5 / 0.34);
             green = Math.round(245 - (scrollPercentage - 0.66) * 5 / 0.34);
             blue = Math.round(237 + (scrollPercentage - 0.66) * 15 / 0.34);
