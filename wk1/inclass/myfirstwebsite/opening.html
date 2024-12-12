@@ -16,29 +16,30 @@
             text-align: center;
         }
 
-        /* Navigation Bar */
+        /* Updated Navigation Bar */
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: transparent;
+            background-color: #fff;
             padding: 1rem;
-            position: fixed;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
             top: 0;
             width: 100%;
-            z-index: 10;
+            z-index: 1000;
         }
 
         .navbar a {
             margin: 0 20px;
-            text-decoration: none;
-            color: #ccc;
+            color: #333;
             font-size: 1rem;
             text-transform: uppercase;
-            transition: color 0.3s;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .navbar a:hover {
-            color: #00aaff;
+            color: #0066cc;
         }
 
         /* Centered Page Content */
@@ -84,25 +85,23 @@
         }
 
         /* Footer Styling */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    color: #aaa;
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    margin: 0; /* Ensures no margin on sides */
-    box-sizing: border-box; /* Prevents padding or borders from affecting the width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #aaa;
+            background-color: transparent;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
